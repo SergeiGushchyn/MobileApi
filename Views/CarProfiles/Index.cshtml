@@ -1,0 +1,106 @@
+﻿@model IEnumerable<MobileApp.Models.CarProfile>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Specification.Price)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Specification.Year)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Specification.Make)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Specification.Model)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Specification.Mileage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Specification.Trim)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Specification.Body)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Specification.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Specification.Transmission)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Specification.Vin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Specification.Condition)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Specification.ExteriorColor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Specification.InteriorColor)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Specification.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Specification.Year)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Specification.Make)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Specification.Model)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Specification.Mileage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Specification.Trim)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Specification.Body)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Specification.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Specification.Transmission)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Specification.Vin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Specification.Condition)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Specification.ExteriorColor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Specification.InteriorColor)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
